@@ -49,6 +49,7 @@
             this.KTM = new System.Windows.Forms.CheckBox();
             this.BTN4 = new System.Windows.Forms.Button();
             this.BTN5 = new System.Windows.Forms.Button();
+            this.BTN6 = new System.Windows.Forms.Button();
             this.grpTempConverter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,7 +156,6 @@
             this.BTN2.TabIndex = 8;
             this.BTN2.Text = "button2";
             this.BTN2.UseVisualStyleBackColor = true;
-            this.BTN2.Click += new System.EventHandler(this.BTN2_Click);
             // 
             // TXT2
             // 
@@ -286,11 +286,23 @@
             this.BTN5.UseVisualStyleBackColor = true;
             this.BTN5.Click += new System.EventHandler(this.BTN5_click);
             // 
+            // BTN6
+            // 
+            this.BTN6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN6.Location = new System.Drawing.Point(846, 348);
+            this.BTN6.Name = "BTN6";
+            this.BTN6.Size = new System.Drawing.Size(75, 31);
+            this.BTN6.TabIndex = 21;
+            this.BTN6.Text = "button5";
+            this.BTN6.UseVisualStyleBackColor = true;
+            this.BTN6.Click += new System.EventHandler(this.BTN6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 648);
+            this.Controls.Add(this.BTN6);
             this.Controls.Add(this.BTN5);
             this.Controls.Add(this.MC1);
             this.Controls.Add(this.BTN4);
@@ -342,6 +354,7 @@
         private System.Windows.Forms.CheckBox KTM;
         private System.Windows.Forms.Button BTN4;
         private System.Windows.Forms.Button BTN5;
+        private System.Windows.Forms.Button BTN6;
     }
 }
 

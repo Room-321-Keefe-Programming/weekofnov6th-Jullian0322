@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -142,23 +143,25 @@ namespace WeekOfNov6th
             }
         }
 
-        private void BTN2_Click(object sender, EventArgs e)
+       
+        private void BTN6_Click(object sender, EventArgs e)
         {
-            if (MC1.Text = "Dollar to Yen")
+            string FileName = "WeekOfNov6th\\bin\\Debug\\test.txt";
+
+            try
             {
-                RTB1.Text += ((float.Parse(TXT1.Text) / 1) * (1 / 0.0067)).ToString() + Environment.NewLine;
+                using (StreamReader reader = new StreamReader(FileName))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        RTB1.Text += line;
+                    }
+                }
             }
-            else if (MC1.Text = "Yen to Dollar")
+            catch (Exception exp)
             {
-                RTB1.Text += ((float.Parse(TXT1.Text) / 1) * (1 / 148.42)).ToString() + Environment.NewLine;
-            }
-            else if (MC1.Text = "Dollar to Pound")
-            {
-                RTB1.Text += ((float.Parse(TXT1.Text) / 1) * (1 / 1.25)).ToString() + Environment.NewLine;
-            }
-            else
-            {
-                RTB1.Text += ((float.Parse(TXT1.Text) / 1) * (1 / 0.8)).ToString() + Environment.NewLine;
+                Console.WriteLine(exp.Message);
             }
         }
     }
