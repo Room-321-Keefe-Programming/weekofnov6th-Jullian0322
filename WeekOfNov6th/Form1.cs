@@ -163,6 +163,27 @@ namespace WeekOfNov6th
             {
                 Console.WriteLine(exp.Message);
             }
+
         }
+        private void BTN2_Click(object sender, EventArgs e)
+        {
+            if (MC1.Text == "Yen to Dollar")
+            {
+                RTB1.Text += ((float.Parse(TXT1.Text) / 1) * 0.0067 / 1).ToString() + Environment.NewLine;
+            }
+            else if (MC1.Text == "Dollar to Yen")
+            {
+                RTB1.Text += ((float.Parse(TXT1.Text) / 1) * 149.54 / 1).ToString() + Environment.NewLine;
+            }
+            else if (MC1.Text == "Pound to Dollar")
+            {
+                RTB1.Text += ((float.Parse(TXT1.Text) / 1) * 1.25 / 1).ToString() + Environment.NewLine;
+            }
+            else
+            {
+                RTB1.Text += ((float.Parse(TXT1.Text) / 1) * .80 / 1).ToString() + Environment.NewLine;
+            }
+        }
+
     }
 }
